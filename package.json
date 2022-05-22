@@ -6,9 +6,24 @@
   "author": "Henrique <henriqueaureliocsilva@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "husky": "^8.0.1"
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint:fix": "npm lint --fix",
+    "lint-staged": "lint-staged"
+  },
+  "linst-staged": {
+    "*.ts": [
+      "npm run lint:fix"
+    ]
+  },
+  "husky": {
+    "hooks": {}
+  },
+  "dependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0"
   }
 }
