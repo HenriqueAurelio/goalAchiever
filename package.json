@@ -1,26 +1,19 @@
 {
-  "name": "goalAchiever",
+  "name": "goalachiever",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/HenriqueAurelio/goalAchiever.git",
   "author": "Henrique <henriqueaureliocsilva@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "husky": "^8.0.1",
-    "lint-staged": "^12.4.1"
+    "husky": "^8.0.1"
   },
   "scripts": {
-    "prepare": "husky install",
-    "lint:fix": "npm lint --fix",
-    "lint-staged": "lint-staged"
+    "prepare": "husky install"
   },
-  "linst-staged": {
-    "*.ts": [
-      "npm run lint:fix"
-    ]
-  },
+
   "husky": {
-    "hooks": {}
+    "hooks": {"commit-msg":"commitlint -E HUSKY_GIT_PARAMS"}
   },
   "dependencies": {
     "@commitlint/cli": "^17.0.0",
